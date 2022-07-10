@@ -31,8 +31,9 @@ int main(int argc, char *argv[])
 
     // sleep
     sleep(10);
-    
     rq.command_index = 1;
+
+
     rq.leg_index = 12;
     // rq.foot1_motion = {0.0, 0.0 ,-75.0 };
     // rq.foot2_motion = {0.0, 0.0 ,-75.0 };
