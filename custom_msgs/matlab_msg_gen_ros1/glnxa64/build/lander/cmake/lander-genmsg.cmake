@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "lander: 0 messages, 1 services")
+message(STATUS "lander: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ilander:/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg;-Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -13,6 +13,11 @@ add_custom_target(lander_generate_messages ALL)
 # verify that message/service dependencies have not changed since configure
 
 
+
+get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" NAME_WE)
+add_custom_target(_lander_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lander" "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" ""
+)
 
 get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" NAME_WE)
 add_custom_target(_lander_generate_messages_check_deps_${_filename}
@@ -25,6 +30,12 @@ add_custom_target(_lander_generate_messages_check_deps_${_filename}
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(lander
+  "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lander
+)
 
 ### Generating Services
 _generate_srv_cpp(lander
@@ -46,6 +57,8 @@ add_custom_target(lander_generate_messages_cpp
 add_dependencies(lander_generate_messages lander_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" NAME_WE)
+add_dependencies(lander_generate_messages_cpp _lander_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" NAME_WE)
 add_dependencies(lander_generate_messages_cpp _lander_generate_messages_check_deps_${_filename})
 
@@ -58,6 +71,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lander_generate_messages_cpp)
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(lander
+  "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lander
+)
 
 ### Generating Services
 _generate_srv_py(lander
@@ -79,6 +98,8 @@ add_custom_target(lander_generate_messages_py
 add_dependencies(lander_generate_messages lander_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" NAME_WE)
+add_dependencies(lander_generate_messages_py _lander_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" NAME_WE)
 add_dependencies(lander_generate_messages_py _lander_generate_messages_check_deps_${_filename})
 

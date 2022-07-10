@@ -146,13 +146,13 @@ build lander/lander_genpy: phony lander/lander_generate_messages_py
 #############################################
 # Utility command for lander_generate_messages_py
 
-build lander/lander_generate_messages_py: phony lander/CMakeFiles/lander_generate_messages_py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+build lander/lander_generate_messages_py: phony lander/CMakeFiles/lander_generate_messages_py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/__init__.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
 
 
 #############################################
 # Utility command for lander_generate_messages_cpp
 
-build lander/lander_generate_messages_cpp: phony lander/CMakeFiles/lander_generate_messages_cpp /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
+build lander/lander_generate_messages_cpp: phony lander/CMakeFiles/lander_generate_messages_cpp /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/gait_plan_msgs.h /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
 
 
 #############################################
@@ -171,6 +171,12 @@ build lander/rebuild_cache: phony lander/CMakeFiles/rebuild_cache.util
 # Utility command for _lander_generate_messages_check_deps_mv_msgs
 
 build lander/_lander_generate_messages_check_deps_mv_msgs: phony lander/CMakeFiles/_lander_generate_messages_check_deps_mv_msgs
+
+
+#############################################
+# Utility command for _lander_generate_messages_check_deps_gait_plan_msgs
+
+build lander/_lander_generate_messages_check_deps_gait_plan_msgs: phony lander/CMakeFiles/_lander_generate_messages_check_deps_gait_plan_msgs
 
 
 #############################################
@@ -265,6 +271,14 @@ build lander/std_msgs_generate_messages_cpp: phony
 
 build cmake_object_order_depends_target_lander_matlab: phony || lander/lander_generate_messages_cpp lander/lander_generate_messages_py lander/roscpp_generate_messages_cpp lander/roscpp_generate_messages_eus lander/roscpp_generate_messages_lisp lander/roscpp_generate_messages_nodejs lander/roscpp_generate_messages_py lander/rosgraph_msgs_generate_messages_cpp lander/rosgraph_msgs_generate_messages_eus lander/rosgraph_msgs_generate_messages_lisp lander/rosgraph_msgs_generate_messages_nodejs lander/rosgraph_msgs_generate_messages_py lander/std_msgs_generate_messages_cpp lander/std_msgs_generate_messages_eus lander/std_msgs_generate_messages_lisp lander/std_msgs_generate_messages_nodejs lander/std_msgs_generate_messages_py
 
+build lander/CMakeFiles/lander_matlab.dir/src/lander_gait_plan_msgs_message.cpp.o: CXX_COMPILER__lander_matlab /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/src/lander_gait_plan_msgs_message.cpp || cmake_object_order_depends_target_lander_matlab
+  DEFINES = -DLANDER_BUILDING_LIBRARY -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"lander\" -Dclass_loader=ros1_class_loader -Dlander_matlab_EXPORTS
+  DEP_FILE = lander/CMakeFiles/lander_matlab.dir/src/lander_gait_plan_msgs_message.cpp.o.d
+  FLAGS = -O0 -fPIC   -std=gnu++14
+  INCLUDES = -I/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include -I/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/include -I/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander -I/home/abc/matlab/sys/ros1/glnxa64/ros1/include -I/home/abc/matlab/sys/ros1/glnxa64/ros1/boost/include -I/home/abc/matlab/sys/ros1/glnxa64/ros1/console_bridge/include -I/home/abc/matlab/sys/ros1/glnxa64/ros1/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/abc/matlab/extern/include -I/home/abc/matlab/extern/include/MatlabDataArray -I/home/abc/matlab/toolbox/ros/include/ros1 -I/home/abc/matlab/sys/ros1/glnxa64/ros1/include/class_loader -I/home/abc/matlab/toolbox/ros/mlroscpp/custom_messages/include -I/home/abc/matlab/sys/ros1/glnxa64/ros1/bzip2/include -I/home/abc/matlab/sys/ros1/glnxa64/ros1/lz4/include -I/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/include/lander
+  OBJECT_DIR = lander/CMakeFiles/lander_matlab.dir
+  OBJECT_FILE_DIR = lander/CMakeFiles/lander_matlab.dir/src
+
 build lander/CMakeFiles/lander_matlab.dir/src/lander_mv_msgs_service.cpp.o: CXX_COMPILER__lander_matlab /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/src/lander_mv_msgs_service.cpp || cmake_object_order_depends_target_lander_matlab
   DEFINES = -DLANDER_BUILDING_LIBRARY -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"lander\" -Dclass_loader=ros1_class_loader -Dlander_matlab_EXPORTS
   DEP_FILE = lander/CMakeFiles/lander_matlab.dir/src/lander_mv_msgs_service.cpp.o.d
@@ -281,7 +295,7 @@ build lander/CMakeFiles/lander_matlab.dir/src/lander_mv_msgs_service.cpp.o: CXX_
 #############################################
 # Link the shared library /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/liblander_matlab.so
 
-build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/liblander_matlab.so: CXX_SHARED_LIBRARY_LINKER__lander_matlab lander/CMakeFiles/lander_matlab.dir/src/lander_mv_msgs_service.cpp.o | /home/abc/matlab/extern/bin/glnxa64/libMatlabDataArray.so /home/abc/matlab/sys/ros1/glnxa64/ros1/console_bridge/lib/libconsole_bridge.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libros1_class_loader.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librosconsole.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroscpp.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroscpp_serialization.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librostime.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librosbag_storage.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroslz4.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libtopic_tools.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libmatlab_rosbag.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libactionlib.so /home/abc/matlab/sys/ros1/glnxa64/ros1/boost/lib/libmwboost_thread.so || lander/lander_generate_messages_cpp lander/lander_generate_messages_py lander/roscpp_generate_messages_cpp lander/roscpp_generate_messages_eus lander/roscpp_generate_messages_lisp lander/roscpp_generate_messages_nodejs lander/roscpp_generate_messages_py lander/rosgraph_msgs_generate_messages_cpp lander/rosgraph_msgs_generate_messages_eus lander/rosgraph_msgs_generate_messages_lisp lander/rosgraph_msgs_generate_messages_nodejs lander/rosgraph_msgs_generate_messages_py lander/std_msgs_generate_messages_cpp lander/std_msgs_generate_messages_eus lander/std_msgs_generate_messages_lisp lander/std_msgs_generate_messages_nodejs lander/std_msgs_generate_messages_py
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/liblander_matlab.so: CXX_SHARED_LIBRARY_LINKER__lander_matlab lander/CMakeFiles/lander_matlab.dir/src/lander_gait_plan_msgs_message.cpp.o lander/CMakeFiles/lander_matlab.dir/src/lander_mv_msgs_service.cpp.o | /home/abc/matlab/extern/bin/glnxa64/libMatlabDataArray.so /home/abc/matlab/sys/ros1/glnxa64/ros1/console_bridge/lib/libconsole_bridge.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libros1_class_loader.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librosconsole.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroscpp.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroscpp_serialization.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librostime.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librosbag_storage.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroslz4.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libtopic_tools.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libmatlab_rosbag.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libactionlib.so /home/abc/matlab/sys/ros1/glnxa64/ros1/boost/lib/libmwboost_thread.so || lander/lander_generate_messages_cpp lander/lander_generate_messages_py lander/roscpp_generate_messages_cpp lander/roscpp_generate_messages_eus lander/roscpp_generate_messages_lisp lander/roscpp_generate_messages_nodejs lander/roscpp_generate_messages_py lander/rosgraph_msgs_generate_messages_cpp lander/rosgraph_msgs_generate_messages_eus lander/rosgraph_msgs_generate_messages_lisp lander/rosgraph_msgs_generate_messages_nodejs lander/rosgraph_msgs_generate_messages_py lander/std_msgs_generate_messages_cpp lander/std_msgs_generate_messages_eus lander/std_msgs_generate_messages_lisp lander/std_msgs_generate_messages_nodejs lander/std_msgs_generate_messages_py
   LANGUAGE_COMPILE_FLAGS = -O0
   LINK_LIBRARIES = -Wl,-rpath,/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib:/home/abc/matlab/extern/bin/glnxa64:/home/abc/matlab/sys/ros1/glnxa64/ros1/console_bridge/lib:/home/abc/matlab/sys/ros1/glnxa64/ros1/lib:/home/abc/matlab/sys/ros1/glnxa64/ros1/boost/lib -lMatlabDataArray /home/abc/matlab/sys/ros1/glnxa64/ros1/console_bridge/lib/libconsole_bridge.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libros1_class_loader.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librosconsole.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroscpp.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroscpp_serialization.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librostime.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/librosbag_storage.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libroslz4.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libtopic_tools.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libmatlab_rosbag.so /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/libactionlib.so /home/abc/matlab/sys/ros1/glnxa64/ros1/boost/lib/libmwboost_thread.so -ldl
   LINK_PATH = -L/home/abc/matlab/extern/bin/glnxa64  -L/home/abc/matlab/sys/ros1/glnxa64/ros1/console_bridge/lib  -L/home/abc/matlab/sys/ros1/glnxa64/ros1/lib  -L/home/abc/matlab/sys/ros1/glnxa64/ros1/boost/lib
@@ -345,22 +359,40 @@ build lander/std_msgs_generate_messages_py: phony
 #############################################
 # Phony custom command for lander/CMakeFiles/lander_generate_messages_py
 
-build lander/CMakeFiles/lander_generate_messages_py: phony /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py || lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+build lander/CMakeFiles/lander_generate_messages_py: phony /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/__init__.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+
+
+#############################################
+# Custom command for /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py
+
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/genpy/genmsg_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg -Ilander:/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg -Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg -p lander -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg
+  DESC = Generating Python from MSG lander/gait_plan_msgs
+  restat = 1
 
 
 #############################################
 # Custom command for /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py
 
-build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/genpy/gensrv_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv || lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
-  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv -Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg -p lander -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/genpy/gensrv_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv -Ilander:/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg -Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg -p lander -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv
   DESC = Generating Python code from SRV lander/mv_msgs
+  restat = 1
+
+
+#############################################
+# Custom command for /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/__init__.py
+
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/__init__.py: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/genpy/genmsg_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg --initpy
+  DESC = Generating Python msg __init__.py for lander
   restat = 1
 
 
 #############################################
 # Custom command for /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py
 
-build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/genpy/genmsg_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py || lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/genpy/genmsg_py.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_mv_msgs.py || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_py
   COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv --initpy
   DESC = Generating Python srv __init__.py for lander
   restat = 1
@@ -369,14 +401,23 @@ build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/de
 #############################################
 # Phony custom command for lander/CMakeFiles/lander_generate_messages_cpp
 
-build lander/CMakeFiles/lander_generate_messages_cpp: phony /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h || lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
+build lander/CMakeFiles/lander_generate_messages_cpp: phony /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/gait_plan_msgs.h /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
+
+
+#############################################
+# Custom command for /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/gait_plan_msgs.h
+
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/gait_plan_msgs.h: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/gencpp/gen_cpp.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/msg.h.template || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
+  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg -Ilander:/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg -Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg -p lander -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander -e /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/cmake/..
+  DESC = Generating C++ code from lander/gait_plan_msgs.msg
+  restat = 1
 
 
 #############################################
 # Custom command for /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h
 
-build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/gencpp/gen_cpp.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/msg.h.template /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/srv.h.template || lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
-  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv -Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg -p lander -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander -e /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/cmake/..
+build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander/mv_msgs.h: CUSTOM_COMMAND /home/abc/matlab/sys/ros1/glnxa64/ros1/lib/gencpp/gen_cpp.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/msg.h.template /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/srv.h.template || lander/_lander_generate_messages_check_deps_gait_plan_msgs lander/_lander_generate_messages_check_deps_mv_msgs lander/std_msgs_generate_messages_cpp
+  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv -Ilander:/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg -Istd_msgs:/home/abc/matlab/sys/ros1/glnxa64/ros1/share/std_msgs/cmake/../msg -p lander -o /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/include/lander -e /home/abc/matlab/sys/ros1/glnxa64/ros1/share/gencpp/cmake/..
   DESC = Generating C++ code from lander/mv_msgs.srv
   restat = 1
 
@@ -386,6 +427,13 @@ build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/de
 
 build lander/CMakeFiles/_lander_generate_messages_check_deps_mv_msgs: CUSTOM_COMMAND
   COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py lander /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv
+
+
+#############################################
+# Custom command for lander/CMakeFiles/_lander_generate_messages_check_deps_gait_plan_msgs
+
+build lander/CMakeFiles/_lander_generate_messages_check_deps_gait_plan_msgs: CUSTOM_COMMAND
+  COMMAND = cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py lander /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -579,6 +627,8 @@ build /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/de
 
 # =============================================================================
 # Target aliases.
+
+build _lander_generate_messages_check_deps_gait_plan_msgs: phony lander/_lander_generate_messages_check_deps_gait_plan_msgs
 
 build _lander_generate_messages_check_deps_mv_msgs: phony lander/_lander_generate_messages_check_deps_mv_msgs
 

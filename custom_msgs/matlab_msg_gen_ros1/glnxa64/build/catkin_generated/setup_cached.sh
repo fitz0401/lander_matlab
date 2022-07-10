@@ -10,6 +10,5 @@
 export CMAKE_PREFIX_PATH="/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD='/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build'
 export PYTHONPATH="/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROS_PACKAGE_PATH="/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src:$ROS_PACKAGE_PATH"

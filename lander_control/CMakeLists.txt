@@ -50,11 +50,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  gait_plan_msgs.msg
+)
 
 ## Generate services in the 'srv' folder
 add_service_files(
@@ -108,7 +107,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES lander_control
-#  CATKIN_DEPENDS cospy roscpp rosmsg std_msgs message_runtime
+ CATKIN_DEPENDS rospy roscpp std_msgs message_runtime
 #  DEPENDS system_lib
 )
 

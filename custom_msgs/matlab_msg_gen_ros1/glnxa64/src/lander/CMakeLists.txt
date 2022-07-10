@@ -27,6 +27,10 @@ find_package(catkin REQUIRED COMPONENTS
 ################################################
 ## Declare ROS messages, services and actions ##
 ################################################
+add_message_files(
+    FILES
+    gait_plan_msgs.msg
+)
 add_service_files(
     FILES
     mv_msgs.srv
@@ -87,6 +91,7 @@ link_directories("/home/abc/matlab/sys/ros1/glnxa64/ros1/boost/lib")
 add_library(
     lander_matlab 
     SHARED
+    src/lander_gait_plan_msgs_message.cpp
     src/lander_mv_msgs_service.cpp
 )
 target_include_directories(lander_matlab PUBLIC
@@ -142,4 +147,4 @@ add_custom_command(
                    ARGS -E copy ${PROJECT_SOURCE_DIR}/src/${file_i} ${CATKIN_DEVEL_PREFIX}/_ert_rtw/${file_i}
 				   )
 endforeach(file_i)
-# Generated on Wed Jul 06 09:37:09 2022
+# Generated on Sat Jul 09 14:17:24 2022
