@@ -43,7 +43,7 @@ BODY_FOR_CALU = LoadWorkspace(BODY_FOR_CALU);
 BODY_FOR_CALU = UpdateBodySpace(BODY_FOR_CALU); % 5 代表身体
 % 因此，工作空间矩阵始终平行于前进方向
 % 即使是旋转，也是这一小步的前进方向
-
+BODY_FOR_CALU.Land_pose=[441.841,0,-445.143];
 % Body和Body都设为42*n*m*p矩阵，Body0是为了初始化，Body是为了计算步态
 BODY_FOR_CALU.Body0 = BODY_FOR_CALU.Body;
 % 计算初始时刻公共工作空间的大小并赋值给四条腿

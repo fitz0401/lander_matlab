@@ -26,7 +26,7 @@ targetArgu = [3000; 0]; % 第一行是运动距离；第二行是相对角度（弧度）
 % 初始化画图窗口
 BODY_FOR_CALU=InitialSimulationData(BODY_FOR_CALU,BODY_PARA, gap, target);
 robotBodyData = BODY_FOR_CALU.Body'; % 存储数据，为后处理准备
-
+DELTA_LEG_initial=roundn(BODY_FOR_CALU.TraceData-repmat(BODY_FOR_CALU.Land_pose,1,4),-4);
 %% 先计算步态，然后运动（同时生成运动图像）。若遇到障碍物，转向。然后循环
 targetNumber = 1; flagDeadLock = false; stepNumber = 1; indexFoot = 0;
 while(1)
@@ -86,8 +86,8 @@ while(1)
     %腿的运动
     BODY_FOR_CALU = MoveUpdateShow(BODY_FOR_CALU, indexFoot, FootStep(1:3),BODY_PARA);
     % 记录相关信息
-
     stepNumber = stepNumber + 1;
+    Leg_Point=roundn(BODY_FOR_CALU.TraceData(20*(stepNumber-3)+1:20*(stepNumber-1),:),-4);
 end
 %% 后处理table数据
 % load('table.mat');

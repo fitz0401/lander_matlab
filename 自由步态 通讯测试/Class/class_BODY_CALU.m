@@ -37,6 +37,7 @@ classdef class_BODY_CALU
         stride = 80 % 最大跨距
         % 4*3的矩阵，分别是以足端为中心，四个身体顶点相对于足端点的δx/y/z
         IdealLegLength
+        Land_pose%着陆位姿的初始位型
     end
     
    %添加轨迹目前的办法就是修改Move函数和show函数

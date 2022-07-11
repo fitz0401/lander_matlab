@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     // 0:getpos; 1:init; 2:planfoot; 3:planmotion
 
     // sleep
-    sleep(10);
+    sleep(1);
     rq.command_index = 1;
 
 

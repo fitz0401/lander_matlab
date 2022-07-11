@@ -7,7 +7,7 @@ function BODY_FOR_CALU = LoadWorkspace(BODY_FOR_CALU)
 % load ('E:\2021\集成技术\赵辰尧\步态规划算法源代码\自由步态\workingarea\map_z_up.mat');
 % 工作空间是相对谁的，机身坐标系还是世界坐标系？？
 % 各腿工作空间的点储存方式，相对坐标系？？点云的形状是否必须为长方体，其他形状点云是否会影响后续代码和处理？？
-path = '/home/abc/lander_control_ws/src/自由步态 通讯测试';
+path = "/home/abc/lander_control_ws/src/自由步态 通讯测试";
 load (strcat(path,'/workingarea/WS_up.mat'));
 load (strcat(path,'/workingarea/WS_down.mat'));
 load (strcat(path,'/workingarea/XS.mat'));
