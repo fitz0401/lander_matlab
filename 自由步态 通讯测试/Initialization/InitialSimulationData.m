@@ -108,7 +108,7 @@ BODY_FOR_MOVE.PreStep=[];
 
 %% 初始化 BODY_FOR_SHOW
 
-set(gcf,'units','centimeters','position',[2,2,38,18]); % figure窗口形状[离屏幕左下角距离 长和宽]
+%set(gcf,'units','centimeters','position',[2,2,38,18]); % figure窗口形状[离屏幕左下角距离 长和宽]
 % BODY_FOR_SHOW.SubFigure.Robot = subplot('Position',[0.04 0.12 0.45 0.8]); % 距离figure窗口左下角的距离（百分比），具体数值同上
 % % SubFigure.Robot是窗口的名称，Robot是图像中直线等等的名称
 % title('Robot');

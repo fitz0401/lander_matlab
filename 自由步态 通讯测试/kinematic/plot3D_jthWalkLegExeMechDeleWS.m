@@ -249,7 +249,7 @@ PLOTLEG2=[[R1_G(2),R2_G(2)]',[R1_G(2),R3_G(2)]',[R2_G(2),R3_G(2)]',[R1_G(2),U1_G
 PLOTLEG3=[[R1_G(3),R2_G(3)]',[R1_G(3),R3_G(3)]',[R2_G(3),R3_G(3)]',[R1_G(3),U1_G(3)]',[R2_G(3),U2_G(3)]',[R3_G(3),U3_G(3)]',...
     [U1_G(3),S1_G(3)]',[U2_G(3),S2_G(3)]',[U3_G(3),S3_G(3)]',[A_G(3),S2_G(3)]',[A_G(3),S3_G(3)]',[S2_G(3),S3_G(3)]',[Rt12_C(3),Rv1_C(3)]'];
 hold on
-LEGfigure=plot3(PLOTLEG1,PLOTLEG2,PLOTLEG3,'b','LineWidth',3)  %R1R2
+LEGfigure=plot3(PLOTLEG1,PLOTLEG2,PLOTLEG3,'b','LineWidth',3);  %R1R2
 
 % plot3([R1_G(1),R2_G(1)],[R1_G(2),R2_G(2)],[R1_G(3),R2_G(3)],'b','LineWidth',3)  %R1R2
 % hold on
@@ -286,7 +286,7 @@ LEGfigure=plot3(PLOTLEG1,PLOTLEG2,PLOTLEG3,'b','LineWidth',3)  %R1R2
 r = 0.3*p1;  % ∞Îæ∂
 pos = [S1_G(1),S1_G(2),S1_G(3)]; % ‘≤–ƒŒª÷√
 t=[0:1:(2*pi),0];% ‘≤ª¨–‘…Ë÷√
-FOOTfigure=plot3(pos(1)+r*sin(t),pos(2)+r*cos(t), pos(3)*ones(size(t)),'b','LineWidth',3)
+FOOTfigure=plot3(pos(1)+r*sin(t),pos(2)+r*cos(t), pos(3)*ones(size(t)),'b','LineWidth',3);
 
 % xlabel('x')
 % ylabel('y')

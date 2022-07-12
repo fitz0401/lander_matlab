@@ -37,7 +37,7 @@ req_msg.CommandIndex = 0;
 isFinishFlag = false;
 send(lander_pub, req_msg);
 % 用户输入，检查初始位置信息后决定是否继续执行
-cheak_string = input("请检查编码器位置是否在零位，并决定是否继续执行[y/n]:","s");
+cheak_string = input("请检查编码器位置是否正确（初始姿态下均为0），并决定是否继续执行[y/n]:","s");
 if(cheak_string == 'n')
     % 关闭ROS网络并退出程序
     rosshutdown
@@ -138,27 +138,29 @@ while(1)
     stepNumber = stepNumber + 1;
     %% 判断上个指令的动作是否执行完毕，并发送数据
     Leg_Point=roundn(BODY_FOR_CALU.TraceData(20*(stepNumber-3)+1:20*(stepNumber-2),:),-3);
-    req_msg.DataNum = 20;
-    req_msg.Foot1TraceX = Leg_Point(:,1);
-    req_msg.Foot1TraceY = Leg_Point(:,2);
-    req_msg.Foot1TraceZ = Leg_Point(:,3);
-    req_msg.Foot2TraceX = Leg_Point(:,4);
-    req_msg.Foot2TraceY = Leg_Point(:,5);
-    req_msg.Foot2TraceZ = Leg_Point(:,6);
-    req_msg.Foot3TraceX = Leg_Point(:,7);
-    req_msg.Foot3TraceY = Leg_Point(:,8);
-    req_msg.Foot3TraceZ = Leg_Point(:,9);
-    req_msg.Foot4TraceX = Leg_Point(:,10);
-    req_msg.Foot4TraceY = Leg_Point(:,11);
-    req_msg.Foot4TraceZ = Leg_Point(:,12);
-    if count ~= 0
-        while isFinishFlag == false
-            isFinishFlag = get(GlobalParam, '/isFinishFlag');
+    if ~isempty(find((Leg_Point(1,:)==Leg_Point(end,:))==0))
+        req_msg.DataNum = 20;
+        req_msg.Foot1TraceX = Leg_Point(:,1);
+        req_msg.Foot1TraceY = Leg_Point(:,2);
+        req_msg.Foot1TraceZ = Leg_Point(:,3);
+        req_msg.Foot2TraceX = Leg_Point(:,4);
+        req_msg.Foot2TraceY = Leg_Point(:,5);
+        req_msg.Foot2TraceZ = Leg_Point(:,6);
+        req_msg.Foot3TraceX = Leg_Point(:,7);
+        req_msg.Foot3TraceY = Leg_Point(:,8);
+        req_msg.Foot3TraceZ = Leg_Point(:,9);
+        req_msg.Foot4TraceX = Leg_Point(:,10);
+        req_msg.Foot4TraceY = Leg_Point(:,11);
+        req_msg.Foot4TraceZ = Leg_Point(:,12);
+        if count ~= 0
+            while isFinishFlag == false
+                isFinishFlag = get(GlobalParam, '/isFinishFlag');
+            end
         end
+        % 发布第一段运动
+        isFinishFlag = false;
+        send(lander_pub, req_msg);
     end
-    % 发布第一段运动
-    isFinishFlag = false;
-    send(lander_pub, req_msg);
 
     %% 判断上个指令的动作是否执行完毕，并发送数据
     Leg_Point=roundn(BODY_FOR_CALU.TraceData(20*(stepNumber-2)+1:20*(stepNumber-1),:),-3);
@@ -174,15 +176,14 @@ while(1)
     req_msg.Foot4TraceX = Leg_Point(:,10);
     req_msg.Foot4TraceY = Leg_Point(:,11);
     req_msg.Foot4TraceZ = Leg_Point(:,12);
-    if count ~= 0
-        while isFinishFlag == false
+    
+    while isFinishFlag == false
             isFinishFlag = get(GlobalParam, '/isFinishFlag');
-        end
     end
     % 发布第二段运动，之后直接进入下一个循环计算轨迹
     isFinishFlag = false;
     send(lander_pub, req_msg);
-
+    
     count = count + 1;
     fprintf("————————————正在执行第 %d 次规划命令————————————\n", count);
 end
