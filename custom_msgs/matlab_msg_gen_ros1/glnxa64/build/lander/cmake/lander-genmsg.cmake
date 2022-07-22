@@ -19,9 +19,9 @@ add_custom_target(_lander_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lander" "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" ""
 )
 
-get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" NAME_WE)
+get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv" NAME_WE)
 add_custom_target(_lander_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lander" "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lander" "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv" ""
 )
 
 #
@@ -39,7 +39,7 @@ _generate_msg_cpp(lander
 
 ### Generating Services
 _generate_srv_cpp(lander
-  "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv"
+  "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lander
@@ -59,7 +59,7 @@ add_dependencies(lander_generate_messages lander_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" NAME_WE)
 add_dependencies(lander_generate_messages_cpp _lander_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" NAME_WE)
+get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv" NAME_WE)
 add_dependencies(lander_generate_messages_cpp _lander_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -80,7 +80,7 @@ _generate_msg_py(lander
 
 ### Generating Services
 _generate_srv_py(lander
-  "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv"
+  "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lander
@@ -100,7 +100,7 @@ add_dependencies(lander_generate_messages lander_generate_messages_py)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg" NAME_WE)
 add_dependencies(lander_generate_messages_py _lander_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/mv_msgs.srv" NAME_WE)
+get_filename_component(_filename "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv" NAME_WE)
 add_dependencies(lander_generate_messages_py _lander_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

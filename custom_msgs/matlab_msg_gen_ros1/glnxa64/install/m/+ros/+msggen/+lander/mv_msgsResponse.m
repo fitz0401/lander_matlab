@@ -8,16 +8,24 @@ classdef mv_msgsResponse < ros.Message
         MessageType = 'lander/mv_msgsResponse' % The ROS message type
     end
     properties (Constant, Hidden)
-        MD5Checksum = '6016345cd57c8634afed560eaaf81c72' % The MD5 Checksum of the message definition
-        PropertyList = { 'IsFinish' } % List of non-constant message properties
-        ROSPropertyList = { 'isFinish' } % List of non-constant ROS message properties
+        MD5Checksum = '532b0c4ac83e2427806e5be0d649382c' % The MD5 Checksum of the message definition
+        PropertyList = { 'IsFinish' 'Foot1Position' 'Foot2Position' 'Foot3Position' 'Foot4Position' } % List of non-constant message properties
+        ROSPropertyList = { 'isFinish' 'foot1_position' 'foot2_position' 'foot3_position' 'foot4_position' } % List of non-constant ROS message properties
         PropertyMessageTypes = { '' ...
+            '' ...
+            '' ...
+            '' ...
+            '' ...
             } % Types of contained nested messages
     end
     properties (Constant)
     end
     properties
         IsFinish
+        Foot1Position
+        Foot2Position
+        Foot3Position
+        Foot4Position
     end
     methods
         function set.IsFinish(obj, val)
@@ -25,6 +33,34 @@ classdef mv_msgsResponse < ros.Message
             validAttributes = {'nonempty', 'scalar'};
             validateattributes(val, validClasses, validAttributes, 'mv_msgsResponse', 'IsFinish');
             obj.IsFinish = logical(val);
+        end
+        function set.Foot1Position(obj, val)
+            validClasses = {'numeric'};
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsResponse', 'Foot1Position');
+            obj.Foot1Position = double(val);
+        end
+        function set.Foot2Position(obj, val)
+            validClasses = {'numeric'};
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsResponse', 'Foot2Position');
+            obj.Foot2Position = double(val);
+        end
+        function set.Foot3Position(obj, val)
+            validClasses = {'numeric'};
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsResponse', 'Foot3Position');
+            obj.Foot3Position = double(val);
+        end
+        function set.Foot4Position(obj, val)
+            validClasses = {'numeric'};
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsResponse', 'Foot4Position');
+            obj.Foot4Position = double(val);
         end
     end
     methods (Static, Access = {?matlab.unittest.TestCase, ?ros.Message})

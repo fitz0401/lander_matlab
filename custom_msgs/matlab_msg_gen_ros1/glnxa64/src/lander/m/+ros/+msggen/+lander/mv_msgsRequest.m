@@ -8,10 +8,11 @@ classdef mv_msgsRequest < ros.Message
         MessageType = 'lander/mv_msgsRequest' % The ROS message type
     end
     properties (Constant, Hidden)
-        MD5Checksum = '486898fd75f9040f7b995c917fb086ec' % The MD5 Checksum of the message definition
-        PropertyList = { 'CommandIndex' 'Leg' 'XMotion' 'YMotion' 'ZMotion' 'DataNum' 'Foot1TraceX' 'Foot1TraceY' 'Foot1TraceZ' 'Foot2TraceX' 'Foot2TraceY' 'Foot2TraceZ' 'Foot3TraceX' 'Foot3TraceY' 'Foot3TraceZ' 'Foot4TraceX' 'Foot4TraceY' 'Foot4TraceZ' } % List of non-constant message properties
-        ROSPropertyList = { 'command_index' 'leg' 'x_motion' 'y_motion' 'z_motion' 'data_num' 'foot1_trace_x' 'foot1_trace_y' 'foot1_trace_z' 'foot2_trace_x' 'foot2_trace_y' 'foot2_trace_z' 'foot3_trace_x' 'foot3_trace_y' 'foot3_trace_z' 'foot4_trace_x' 'foot4_trace_y' 'foot4_trace_z' } % List of non-constant ROS message properties
+        MD5Checksum = 'b401d108fe4e07f912067db7a9916b5e' % The MD5 Checksum of the message definition
+        PropertyList = { 'CommandIndex' 'LegIndex' 'Foot1Motion' 'Foot2Motion' 'Foot3Motion' 'Foot4Motion' 'DataNum' 'Foot1TraceX' 'Foot1TraceY' 'Foot1TraceZ' 'Foot2TraceX' 'Foot2TraceY' 'Foot2TraceZ' 'Foot3TraceX' 'Foot3TraceY' 'Foot3TraceZ' 'Foot4TraceX' 'Foot4TraceY' 'Foot4TraceZ' } % List of non-constant message properties
+        ROSPropertyList = { 'command_index' 'leg_index' 'foot1_motion' 'foot2_motion' 'foot3_motion' 'foot4_motion' 'data_num' 'foot1_trace_x' 'foot1_trace_y' 'foot1_trace_z' 'foot2_trace_x' 'foot2_trace_y' 'foot2_trace_z' 'foot3_trace_x' 'foot3_trace_y' 'foot3_trace_z' 'foot4_trace_x' 'foot4_trace_y' 'foot4_trace_z' } % List of non-constant ROS message properties
         PropertyMessageTypes = { '' ...
+            '' ...
             '' ...
             '' ...
             '' ...
@@ -35,10 +36,11 @@ classdef mv_msgsRequest < ros.Message
     end
     properties
         CommandIndex
-        Leg
-        XMotion
-        YMotion
-        ZMotion
+        LegIndex
+        Foot1Motion
+        Foot2Motion
+        Foot3Motion
+        Foot4Motion
         DataNum
         Foot1TraceX
         Foot1TraceY
@@ -60,29 +62,39 @@ classdef mv_msgsRequest < ros.Message
             validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'CommandIndex');
             obj.CommandIndex = int32(val);
         end
-        function set.Leg(obj, val)
+        function set.LegIndex(obj, val)
             validClasses = {'numeric'};
             validAttributes = {'nonempty', 'scalar'};
-            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'Leg');
-            obj.Leg = int32(val);
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'LegIndex');
+            obj.LegIndex = int32(val);
         end
-        function set.XMotion(obj, val)
+        function set.Foot1Motion(obj, val)
             validClasses = {'numeric'};
-            validAttributes = {'nonempty', 'scalar'};
-            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'XMotion');
-            obj.XMotion = double(val);
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'Foot1Motion');
+            obj.Foot1Motion = double(val);
         end
-        function set.YMotion(obj, val)
+        function set.Foot2Motion(obj, val)
             validClasses = {'numeric'};
-            validAttributes = {'nonempty', 'scalar'};
-            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'YMotion');
-            obj.YMotion = double(val);
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'Foot2Motion');
+            obj.Foot2Motion = double(val);
         end
-        function set.ZMotion(obj, val)
+        function set.Foot3Motion(obj, val)
             validClasses = {'numeric'};
-            validAttributes = {'nonempty', 'scalar'};
-            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'ZMotion');
-            obj.ZMotion = double(val);
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'Foot3Motion');
+            obj.Foot3Motion = double(val);
+        end
+        function set.Foot4Motion(obj, val)
+            validClasses = {'numeric'};
+            val = val(:);
+            validAttributes = {'vector', 'numel', 3};
+            validateattributes(val, validClasses, validAttributes, 'mv_msgsRequest', 'Foot4Motion');
+            obj.Foot4Motion = double(val);
         end
         function set.DataNum(obj, val)
             validClasses = {'numeric'};

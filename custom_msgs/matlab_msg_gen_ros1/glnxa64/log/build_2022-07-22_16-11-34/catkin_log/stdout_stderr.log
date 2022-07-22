@@ -1,0 +1,172 @@
+ROS_DISTRO was set to 'melodic' before. Please make sure that the environment does not mix paths from different distributions.
+/home/abc/matlab/sys/ros1/glnxa64/ros1/etc/catkin/profile.d/99.roslisp.sh: 行 21: /mathworks/devel/bat/B3p2/build/3p/derived/glnxa64/ros1/python_venv/bin/python3: 没有那个文件或目录
+[0/1] Re-running CMake...
+-- Using CATKIN_DEVEL_PREFIX: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel
+-- Using CMAKE_PREFIX_PATH: /home/abc/matlab/sys/ros1/glnxa64/ros1;/home/abc/matlab/toolbox/ros/mlroscpp/custom_messages
+-- This workspace overlays: /home/abc/matlab/sys/ros1/glnxa64/ros1;/home/abc/matlab/toolbox/ros/mlroscpp/custom_messages
+-- Using PYTHON_EXECUTABLE: /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: off
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/env.sh: 1: /home/abc/matlab/sys/ros1/glnxa64/ros1/etc/catkin/profile.d/99.roslisp.sh: /mathworks/devel/bat/B3p2/build/3p/derived/glnxa64/ros1/python_venv/bin/python3: not found
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 2 packages in topological order:
+-- ~~  - lander
+-- ~~  - msgs_packages
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'lander'
+-- ==> add_subdirectory(lander)
+-- Disabling the following message generators: geneus;genlisp;gennodejs
+-- Using these message generators: gencpp;genpy
+-- lander: 1 messages, 1 services
+-- +++ processing catkin package: 'msgs_packages'
+-- ==> add_subdirectory(msgs_packages)
+-- Disabling the following message generators: geneus;genlisp;gennodejs
+-- Using these message generators: gencpp;genpy
+-- msgs_packages: 0 messages, 1 services
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build
+ninja: no work to do.
+[1/10] cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py lander /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/msg/gait_plan_msgs.msg
+[2/10] cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/msgs_packages && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py msgs_packages /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/msgs_packages/srv/mv_msgs.srv
+[3/10] cd /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/lander && /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build/catkin_generated/env_cached.sh /home/abc/.matlab/R2022a/ros1/glnxa64/venv/bin/python3 /home/abc/matlab/sys/ros1/glnxa64/ros1/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py lander /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/srv/gait_feedback_msgs.srv
+[4/10] Generating Python code from SRV lander/gait_feedback_msgs
+[5/10] Generating Python msg __init__.py for lander
+[6/10] Generating Python srv __init__.py for lander
+[7/10] Generating C++ code from lander/gait_feedback_msgs.srv
+[8/10] Building CXX object lander/CMakeFiles/lander_matlab.dir/src/lander_gait_feedback_msgs_service.cpp.o
+In file included from /home/abc/matlab/sys/ros1/glnxa64/ros1/include/ros/publisher.h:35:0,
+                 from /home/abc/matlab/sys/ros1/glnxa64/ros1/include/ros/node_handle.h:32,
+                 from /home/abc/matlab/sys/ros1/glnxa64/ros1/include/ros/ros.h:45,
+                 from /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src/lander/src/lander_gait_feedback_msgs_service.cpp:26:
+/home/abc/matlab/sys/ros1/glnxa64/ros1/boost/include/boost/bind.hpp:77:1: note: #pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace mwboost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+ )
+ ^
+[9/10] Linking CXX shared library /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/liblander_matlab.so
+[9/10] Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/_setup_util.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/env.sh
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/setup.bash
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/local_setup.bash
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/setup.sh
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/local_setup.sh
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/setup.zsh
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/local_setup.zsh
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/.rosinstall
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/msg/gait_plan_msgs.msg
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/srv/gait_feedback_msgs.srv
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/cmake/lander-msg-paths.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/mv_msgsRequest.h
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/gait_feedback_msgsRequest.h
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/mv_msgs.h
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/mv_msgsResponse.h
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/gait_plan_msgs.h
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/gait_feedback_msgs.h
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/gait_feedback_msgsResponse.h
+Listing '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander'...
+Listing '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg'...
+Compiling '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/msg/__init__.py'...
+Listing '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv'...
+Compiling '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/__init__.py'...
+Compiling '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/lander/srv/_gait_feedback_msgs.py'...
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/__pycache__
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/__pycache__/__init__.cpython-39.pyc
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/__pycache__
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/__pycache__/__init__.cpython-39.pyc
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/__pycache__/_mv_msgs.cpython-39.pyc
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/__pycache__/_gait_feedback_msgs.cpython-39.pyc
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/_gait_feedback_msgs.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/_mv_msgs.py
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/srv/__init__.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/msg
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/msg/__pycache__
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/msg/__pycache__/_gait_plan_msgs.cpython-39.pyc
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/msg/__pycache__/__init__.cpython-39.pyc
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/msg/__init__.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/msg/_gait_plan_msgs.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/lander/__init__.py
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/pkgconfig/lander.pc
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/cmake/lander-msg-extras.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/cmake/landerConfig.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/cmake/landerConfig-version.cmake
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/lander/package.xml
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/lander/visibility_control.h
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/liblander_matlab.so
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m/
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+lander
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+lander/mv_msgsRequest.m
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+lander/gait_feedback_msgsResponse.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+lander/mv_msgsResponse.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+lander/gait_plan_msgs.m
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+lander/gait_feedback_msgsRequest.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+lander
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+lander/mv_msgsRequest.m
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+lander/gait_feedback_msgsResponse.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+lander/mv_msgsResponse.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+lander/gait_plan_msgs.m
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+lander/gait_feedback_msgsRequest.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/msgs_packages/srv/mv_msgs.srv
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/msgs_packages/cmake/msgs_packages-msg-paths.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/msgs_packages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/msgs_packages/mv_msgsRequest.h
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/msgs_packages/mv_msgs.h
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/msgs_packages/mv_msgsResponse.h
+Listing '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/msgs_packages'...
+Listing '/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel/lib/python3/dist-packages/msgs_packages/srv'...
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/__pycache__
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/__pycache__/__init__.cpython-39.pyc
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/srv
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/srv/__pycache__
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/srv/__pycache__/__init__.cpython-39.pyc
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/srv/__pycache__/_mv_msgs.cpython-39.pyc
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/srv/_mv_msgs.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/srv/__init__.py
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/python3/dist-packages/msgs_packages/__init__.py
+-- Installing: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/pkgconfig/msgs_packages.pc
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/msgs_packages/cmake/msgs_packages-msg-extras.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/msgs_packages/cmake/msgs_packagesConfig.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/msgs_packages/cmake/msgs_packagesConfig-version.cmake
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/share/msgs_packages/package.xml
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/msgs_packages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/include/msgs_packages/visibility_control.h
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/lib/libmsgs_packages_matlab.so
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m/
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+msgs_packages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+msgs_packages/mv_msgsRequest.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+internal/+ros/+custommessages/+msgs_packages/mv_msgsResponse.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+msgs_packages
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+msgs_packages/mv_msgsRequest.m
+-- Up-to-date: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install/m//+ros/+msggen/+msgs_packages/mv_msgsResponse.m
+Base path: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64
+Source space: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/src
+Build space: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build
+Devel space: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/devel
+Install space: /home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/install
+####
+#### Running command: "ninja build.ninja" in "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build"
+####
+####
+#### Running command: "ninja install install -j4 -l4" in "/home/abc/lander_control_ws/src/custom_msgs/matlab_msg_gen_ros1/glnxa64/build"
+####

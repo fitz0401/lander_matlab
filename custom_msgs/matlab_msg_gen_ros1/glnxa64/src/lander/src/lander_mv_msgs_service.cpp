@@ -47,40 +47,53 @@ class LANDER_EXPORT lander_msg_mv_msgsRequest_common : public MATLABROSMsgInterf
         throw std::invalid_argument("Field 'CommandIndex' is wrong type; expected a int32.");
     }
     try {
-        //leg
-        const matlab::data::TypedArray<int32_t> leg_arr = arr["Leg"];
-        msg->leg = leg_arr[0];
+        //leg_index
+        const matlab::data::TypedArray<int32_t> leg_index_arr = arr["LegIndex"];
+        msg->leg_index = leg_index_arr[0];
     } catch (matlab::data::InvalidFieldNameException&) {
-        throw std::invalid_argument("Field 'Leg' is missing.");
+        throw std::invalid_argument("Field 'LegIndex' is missing.");
     } catch (matlab::Exception&) {
-        throw std::invalid_argument("Field 'Leg' is wrong type; expected a int32.");
+        throw std::invalid_argument("Field 'LegIndex' is wrong type; expected a int32.");
     }
     try {
-        //x_motion
-        const matlab::data::TypedArray<double> x_motion_arr = arr["XMotion"];
-        msg->x_motion = x_motion_arr[0];
+        //foot1_motion
+        const matlab::data::TypedArray<double> foot1_motion_arr = arr["Foot1Motion"];
+        size_t nelem = 3;
+        	std::copy(foot1_motion_arr.begin(), foot1_motion_arr.begin()+nelem, msg->foot1_motion.begin());
     } catch (matlab::data::InvalidFieldNameException&) {
-        throw std::invalid_argument("Field 'XMotion' is missing.");
+        throw std::invalid_argument("Field 'Foot1Motion' is missing.");
     } catch (matlab::Exception&) {
-        throw std::invalid_argument("Field 'XMotion' is wrong type; expected a double.");
+        throw std::invalid_argument("Field 'Foot1Motion' is wrong type; expected a double.");
     }
     try {
-        //y_motion
-        const matlab::data::TypedArray<double> y_motion_arr = arr["YMotion"];
-        msg->y_motion = y_motion_arr[0];
+        //foot2_motion
+        const matlab::data::TypedArray<double> foot2_motion_arr = arr["Foot2Motion"];
+        size_t nelem = 3;
+        	std::copy(foot2_motion_arr.begin(), foot2_motion_arr.begin()+nelem, msg->foot2_motion.begin());
     } catch (matlab::data::InvalidFieldNameException&) {
-        throw std::invalid_argument("Field 'YMotion' is missing.");
+        throw std::invalid_argument("Field 'Foot2Motion' is missing.");
     } catch (matlab::Exception&) {
-        throw std::invalid_argument("Field 'YMotion' is wrong type; expected a double.");
+        throw std::invalid_argument("Field 'Foot2Motion' is wrong type; expected a double.");
     }
     try {
-        //z_motion
-        const matlab::data::TypedArray<double> z_motion_arr = arr["ZMotion"];
-        msg->z_motion = z_motion_arr[0];
+        //foot3_motion
+        const matlab::data::TypedArray<double> foot3_motion_arr = arr["Foot3Motion"];
+        size_t nelem = 3;
+        	std::copy(foot3_motion_arr.begin(), foot3_motion_arr.begin()+nelem, msg->foot3_motion.begin());
     } catch (matlab::data::InvalidFieldNameException&) {
-        throw std::invalid_argument("Field 'ZMotion' is missing.");
+        throw std::invalid_argument("Field 'Foot3Motion' is missing.");
     } catch (matlab::Exception&) {
-        throw std::invalid_argument("Field 'ZMotion' is wrong type; expected a double.");
+        throw std::invalid_argument("Field 'Foot3Motion' is wrong type; expected a double.");
+    }
+    try {
+        //foot4_motion
+        const matlab::data::TypedArray<double> foot4_motion_arr = arr["Foot4Motion"];
+        size_t nelem = 3;
+        	std::copy(foot4_motion_arr.begin(), foot4_motion_arr.begin()+nelem, msg->foot4_motion.begin());
+    } catch (matlab::data::InvalidFieldNameException&) {
+        throw std::invalid_argument("Field 'Foot4Motion' is missing.");
+    } catch (matlab::Exception&) {
+        throw std::invalid_argument("Field 'Foot4Motion' is wrong type; expected a double.");
     }
     try {
         //data_num
@@ -227,24 +240,27 @@ class LANDER_EXPORT lander_msg_mv_msgsRequest_common : public MATLABROSMsgInterf
   //----------------------------------------------------------------------------
   MDArray_T lander_msg_mv_msgsRequest_common::get_arr(MDFactory_T& factory, const lander::mv_msgs::Request* msg,
        MultiLibLoader loader, size_t size) {
-    auto outArray = factory.createStructArray({size,1},{"MessageType","CommandIndex","Leg","XMotion","YMotion","ZMotion","DataNum","Foot1TraceX","Foot1TraceY","Foot1TraceZ","Foot2TraceX","Foot2TraceY","Foot2TraceZ","Foot3TraceX","Foot3TraceY","Foot3TraceZ","Foot4TraceX","Foot4TraceY","Foot4TraceZ"});
+    auto outArray = factory.createStructArray({size,1},{"MessageType","CommandIndex","LegIndex","Foot1Motion","Foot2Motion","Foot3Motion","Foot4Motion","DataNum","Foot1TraceX","Foot1TraceY","Foot1TraceZ","Foot2TraceX","Foot2TraceY","Foot2TraceZ","Foot3TraceX","Foot3TraceY","Foot3TraceZ","Foot4TraceX","Foot4TraceY","Foot4TraceZ"});
     for(size_t ctr = 0; ctr < size; ctr++){
     outArray[ctr]["MessageType"] = factory.createCharArray("lander/mv_msgsRequest");
     // command_index
     auto currentElement_command_index = (msg + ctr)->command_index;
     outArray[ctr]["CommandIndex"] = factory.createScalar(currentElement_command_index);
-    // leg
-    auto currentElement_leg = (msg + ctr)->leg;
-    outArray[ctr]["Leg"] = factory.createScalar(currentElement_leg);
-    // x_motion
-    auto currentElement_x_motion = (msg + ctr)->x_motion;
-    outArray[ctr]["XMotion"] = factory.createScalar(currentElement_x_motion);
-    // y_motion
-    auto currentElement_y_motion = (msg + ctr)->y_motion;
-    outArray[ctr]["YMotion"] = factory.createScalar(currentElement_y_motion);
-    // z_motion
-    auto currentElement_z_motion = (msg + ctr)->z_motion;
-    outArray[ctr]["ZMotion"] = factory.createScalar(currentElement_z_motion);
+    // leg_index
+    auto currentElement_leg_index = (msg + ctr)->leg_index;
+    outArray[ctr]["LegIndex"] = factory.createScalar(currentElement_leg_index);
+    // foot1_motion
+    auto currentElement_foot1_motion = (msg + ctr)->foot1_motion;
+    outArray[ctr]["Foot1Motion"] = factory.createArray<lander::mv_msgs::Request::_foot1_motion_type::const_iterator, double>({currentElement_foot1_motion.size(),1}, currentElement_foot1_motion.begin(), currentElement_foot1_motion.end());
+    // foot2_motion
+    auto currentElement_foot2_motion = (msg + ctr)->foot2_motion;
+    outArray[ctr]["Foot2Motion"] = factory.createArray<lander::mv_msgs::Request::_foot2_motion_type::const_iterator, double>({currentElement_foot2_motion.size(),1}, currentElement_foot2_motion.begin(), currentElement_foot2_motion.end());
+    // foot3_motion
+    auto currentElement_foot3_motion = (msg + ctr)->foot3_motion;
+    outArray[ctr]["Foot3Motion"] = factory.createArray<lander::mv_msgs::Request::_foot3_motion_type::const_iterator, double>({currentElement_foot3_motion.size(),1}, currentElement_foot3_motion.begin(), currentElement_foot3_motion.end());
+    // foot4_motion
+    auto currentElement_foot4_motion = (msg + ctr)->foot4_motion;
+    outArray[ctr]["Foot4Motion"] = factory.createArray<lander::mv_msgs::Request::_foot4_motion_type::const_iterator, double>({currentElement_foot4_motion.size(),1}, currentElement_foot4_motion.begin(), currentElement_foot4_motion.end());
     // data_num
     auto currentElement_data_num = (msg + ctr)->data_num;
     outArray[ctr]["DataNum"] = factory.createScalar(currentElement_data_num);
@@ -305,16 +321,68 @@ class LANDER_EXPORT lander_msg_mv_msgsResponse_common : public MATLABROSMsgInter
     } catch (matlab::Exception&) {
         throw std::invalid_argument("Field 'IsFinish' is wrong type; expected a logical.");
     }
+    try {
+        //foot1_position
+        const matlab::data::TypedArray<double> foot1_position_arr = arr["Foot1Position"];
+        size_t nelem = 3;
+        	std::copy(foot1_position_arr.begin(), foot1_position_arr.begin()+nelem, msg->foot1_position.begin());
+    } catch (matlab::data::InvalidFieldNameException&) {
+        throw std::invalid_argument("Field 'Foot1Position' is missing.");
+    } catch (matlab::Exception&) {
+        throw std::invalid_argument("Field 'Foot1Position' is wrong type; expected a double.");
+    }
+    try {
+        //foot2_position
+        const matlab::data::TypedArray<double> foot2_position_arr = arr["Foot2Position"];
+        size_t nelem = 3;
+        	std::copy(foot2_position_arr.begin(), foot2_position_arr.begin()+nelem, msg->foot2_position.begin());
+    } catch (matlab::data::InvalidFieldNameException&) {
+        throw std::invalid_argument("Field 'Foot2Position' is missing.");
+    } catch (matlab::Exception&) {
+        throw std::invalid_argument("Field 'Foot2Position' is wrong type; expected a double.");
+    }
+    try {
+        //foot3_position
+        const matlab::data::TypedArray<double> foot3_position_arr = arr["Foot3Position"];
+        size_t nelem = 3;
+        	std::copy(foot3_position_arr.begin(), foot3_position_arr.begin()+nelem, msg->foot3_position.begin());
+    } catch (matlab::data::InvalidFieldNameException&) {
+        throw std::invalid_argument("Field 'Foot3Position' is missing.");
+    } catch (matlab::Exception&) {
+        throw std::invalid_argument("Field 'Foot3Position' is wrong type; expected a double.");
+    }
+    try {
+        //foot4_position
+        const matlab::data::TypedArray<double> foot4_position_arr = arr["Foot4Position"];
+        size_t nelem = 3;
+        	std::copy(foot4_position_arr.begin(), foot4_position_arr.begin()+nelem, msg->foot4_position.begin());
+    } catch (matlab::data::InvalidFieldNameException&) {
+        throw std::invalid_argument("Field 'Foot4Position' is missing.");
+    } catch (matlab::Exception&) {
+        throw std::invalid_argument("Field 'Foot4Position' is wrong type; expected a double.");
+    }
   }
   //----------------------------------------------------------------------------
   MDArray_T lander_msg_mv_msgsResponse_common::get_arr(MDFactory_T& factory, const lander::mv_msgs::Response* msg,
        MultiLibLoader loader, size_t size) {
-    auto outArray = factory.createStructArray({size,1},{"MessageType","IsFinish"});
+    auto outArray = factory.createStructArray({size,1},{"MessageType","IsFinish","Foot1Position","Foot2Position","Foot3Position","Foot4Position"});
     for(size_t ctr = 0; ctr < size; ctr++){
     outArray[ctr]["MessageType"] = factory.createCharArray("lander/mv_msgsResponse");
     // isFinish
     auto currentElement_isFinish = (msg + ctr)->isFinish;
     outArray[ctr]["IsFinish"] = factory.createScalar(static_cast<bool>(currentElement_isFinish));
+    // foot1_position
+    auto currentElement_foot1_position = (msg + ctr)->foot1_position;
+    outArray[ctr]["Foot1Position"] = factory.createArray<lander::mv_msgs::Response::_foot1_position_type::const_iterator, double>({currentElement_foot1_position.size(),1}, currentElement_foot1_position.begin(), currentElement_foot1_position.end());
+    // foot2_position
+    auto currentElement_foot2_position = (msg + ctr)->foot2_position;
+    outArray[ctr]["Foot2Position"] = factory.createArray<lander::mv_msgs::Response::_foot2_position_type::const_iterator, double>({currentElement_foot2_position.size(),1}, currentElement_foot2_position.begin(), currentElement_foot2_position.end());
+    // foot3_position
+    auto currentElement_foot3_position = (msg + ctr)->foot3_position;
+    outArray[ctr]["Foot3Position"] = factory.createArray<lander::mv_msgs::Response::_foot3_position_type::const_iterator, double>({currentElement_foot3_position.size(),1}, currentElement_foot3_position.begin(), currentElement_foot3_position.end());
+    // foot4_position
+    auto currentElement_foot4_position = (msg + ctr)->foot4_position;
+    outArray[ctr]["Foot4Position"] = factory.createArray<lander::mv_msgs::Response::_foot4_position_type::const_iterator, double>({currentElement_foot4_position.size(),1}, currentElement_foot4_position.begin(), currentElement_foot4_position.end());
     }
     return std::move(outArray);
   } 

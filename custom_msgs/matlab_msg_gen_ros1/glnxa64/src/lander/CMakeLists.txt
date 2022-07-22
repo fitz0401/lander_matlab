@@ -33,7 +33,7 @@ add_message_files(
 )
 add_service_files(
     FILES
-    mv_msgs.srv
+    gait_feedback_msgs.srv
 )
 ## Generate added messages, services and actions with any dependencies listed here
 generate_messages(
@@ -92,7 +92,7 @@ add_library(
     lander_matlab 
     SHARED
     src/lander_gait_plan_msgs_message.cpp
-    src/lander_mv_msgs_service.cpp
+    src/lander_gait_feedback_msgs_service.cpp
 )
 target_include_directories(lander_matlab PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -147,4 +147,4 @@ add_custom_command(
                    ARGS -E copy ${PROJECT_SOURCE_DIR}/src/${file_i} ${CATKIN_DEVEL_PREFIX}/_ert_rtw/${file_i}
 				   )
 endforeach(file_i)
-# Generated on Sat Jul 09 14:17:24 2022
+# Generated on Fri Jul 22 16:11:34 2022

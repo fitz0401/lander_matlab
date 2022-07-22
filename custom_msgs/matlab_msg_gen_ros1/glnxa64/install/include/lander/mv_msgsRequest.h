@@ -25,10 +25,11 @@ struct mv_msgsRequest_
 
   mv_msgsRequest_()
     : command_index(0)
-    , leg(0)
-    , x_motion(0.0)
-    , y_motion(0.0)
-    , z_motion(0.0)
+    , leg_index(0)
+    , foot1_motion()
+    , foot2_motion()
+    , foot3_motion()
+    , foot4_motion()
     , data_num(0)
     , foot1_trace_x()
     , foot1_trace_y()
@@ -42,13 +43,21 @@ struct mv_msgsRequest_
     , foot4_trace_x()
     , foot4_trace_y()
     , foot4_trace_z()  {
-    }
+      foot1_motion.assign(0.0);
+
+      foot2_motion.assign(0.0);
+
+      foot3_motion.assign(0.0);
+
+      foot4_motion.assign(0.0);
+  }
   mv_msgsRequest_(const ContainerAllocator& _alloc)
     : command_index(0)
-    , leg(0)
-    , x_motion(0.0)
-    , y_motion(0.0)
-    , z_motion(0.0)
+    , leg_index(0)
+    , foot1_motion()
+    , foot2_motion()
+    , foot3_motion()
+    , foot4_motion()
     , data_num(0)
     , foot1_trace_x(_alloc)
     , foot1_trace_y(_alloc)
@@ -63,24 +72,34 @@ struct mv_msgsRequest_
     , foot4_trace_y(_alloc)
     , foot4_trace_z(_alloc)  {
   (void)_alloc;
-    }
+      foot1_motion.assign(0.0);
+
+      foot2_motion.assign(0.0);
+
+      foot3_motion.assign(0.0);
+
+      foot4_motion.assign(0.0);
+  }
 
 
 
    typedef int32_t _command_index_type;
   _command_index_type command_index;
 
-   typedef int32_t _leg_type;
-  _leg_type leg;
+   typedef int32_t _leg_index_type;
+  _leg_index_type leg_index;
 
-   typedef double _x_motion_type;
-  _x_motion_type x_motion;
+   typedef boost::array<double, 3>  _foot1_motion_type;
+  _foot1_motion_type foot1_motion;
 
-   typedef double _y_motion_type;
-  _y_motion_type y_motion;
+   typedef boost::array<double, 3>  _foot2_motion_type;
+  _foot2_motion_type foot2_motion;
 
-   typedef double _z_motion_type;
-  _z_motion_type z_motion;
+   typedef boost::array<double, 3>  _foot3_motion_type;
+  _foot3_motion_type foot3_motion;
+
+   typedef boost::array<double, 3>  _foot4_motion_type;
+  _foot4_motion_type foot4_motion;
 
    typedef int32_t _data_num_type;
   _data_num_type data_num;
@@ -151,10 +170,11 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::lander::mv_msgsRequest_<ContainerAllocator1> & lhs, const ::lander::mv_msgsRequest_<ContainerAllocator2> & rhs)
 {
   return lhs.command_index == rhs.command_index &&
-    lhs.leg == rhs.leg &&
-    lhs.x_motion == rhs.x_motion &&
-    lhs.y_motion == rhs.y_motion &&
-    lhs.z_motion == rhs.z_motion &&
+    lhs.leg_index == rhs.leg_index &&
+    lhs.foot1_motion == rhs.foot1_motion &&
+    lhs.foot2_motion == rhs.foot2_motion &&
+    lhs.foot3_motion == rhs.foot3_motion &&
+    lhs.foot4_motion == rhs.foot4_motion &&
     lhs.data_num == rhs.data_num &&
     lhs.foot1_trace_x == rhs.foot1_trace_x &&
     lhs.foot1_trace_y == rhs.foot1_trace_y &&
@@ -224,12 +244,12 @@ struct MD5Sum< ::lander::mv_msgsRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "486898fd75f9040f7b995c917fb086ec";
+    return "b401d108fe4e07f912067db7a9916b5e";
   }
 
   static const char* value(const ::lander::mv_msgsRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x486898fd75f9040fULL;
-  static const uint64_t static_value2 = 0x7b995c917fb086ecULL;
+  static const uint64_t static_value1 = 0xb401d108fe4e07f9ULL;
+  static const uint64_t static_value2 = 0x12067db7a9916b5eULL;
 };
 
 template<class ContainerAllocator>
@@ -252,10 +272,11 @@ struct Definition< ::lander::mv_msgsRequest_<ContainerAllocator> >
 "# 0:getpos; 1:init; 2:planfoot; 3:planmotion\n"
 "int32 command_index\n"
 "# For planfoot\n"
-"int32 leg\n"
-"float64 x_motion\n"
-"float64 y_motion\n"
-"float64 z_motion\n"
+"int32 leg_index\n"
+"float64[3] foot1_motion\n"
+"float64[3] foot2_motion\n"
+"float64[3] foot3_motion\n"
+"float64[3] foot4_motion\n"
 "# For planmotion\n"
 "int32 data_num\n"
 "float64[] foot1_trace_x\n"
@@ -289,10 +310,11 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.command_index);
-      stream.next(m.leg);
-      stream.next(m.x_motion);
-      stream.next(m.y_motion);
-      stream.next(m.z_motion);
+      stream.next(m.leg_index);
+      stream.next(m.foot1_motion);
+      stream.next(m.foot2_motion);
+      stream.next(m.foot3_motion);
+      stream.next(m.foot4_motion);
       stream.next(m.data_num);
       stream.next(m.foot1_trace_x);
       stream.next(m.foot1_trace_y);
@@ -326,14 +348,32 @@ struct Printer< ::lander::mv_msgsRequest_<ContainerAllocator> >
   {
     s << indent << "command_index: ";
     Printer<int32_t>::stream(s, indent + "  ", v.command_index);
-    s << indent << "leg: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.leg);
-    s << indent << "x_motion: ";
-    Printer<double>::stream(s, indent + "  ", v.x_motion);
-    s << indent << "y_motion: ";
-    Printer<double>::stream(s, indent + "  ", v.y_motion);
-    s << indent << "z_motion: ";
-    Printer<double>::stream(s, indent + "  ", v.z_motion);
+    s << indent << "leg_index: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.leg_index);
+    s << indent << "foot1_motion[]" << std::endl;
+    for (size_t i = 0; i < v.foot1_motion.size(); ++i)
+    {
+      s << indent << "  foot1_motion[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.foot1_motion[i]);
+    }
+    s << indent << "foot2_motion[]" << std::endl;
+    for (size_t i = 0; i < v.foot2_motion.size(); ++i)
+    {
+      s << indent << "  foot2_motion[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.foot2_motion[i]);
+    }
+    s << indent << "foot3_motion[]" << std::endl;
+    for (size_t i = 0; i < v.foot3_motion.size(); ++i)
+    {
+      s << indent << "  foot3_motion[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.foot3_motion[i]);
+    }
+    s << indent << "foot4_motion[]" << std::endl;
+    for (size_t i = 0; i < v.foot4_motion.size(); ++i)
+    {
+      s << indent << "  foot4_motion[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.foot4_motion[i]);
+    }
     s << indent << "data_num: ";
     Printer<int32_t>::stream(s, indent + "  ", v.data_num);
     s << indent << "foot1_trace_x[]" << std::endl;

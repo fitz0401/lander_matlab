@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::lander::mv_msgs > {
   static const char* value()
   {
-    return "618d2543874df9eb2cdf1d712a157e36";
+    return "27d686c76786081478a2ea2d859bdf1f";
   }
 
   static const char* value(const ::lander::mv_msgs&) { return value(); }
