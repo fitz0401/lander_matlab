@@ -10,7 +10,7 @@ classdef class_BODY_CALU
         Body0
         Body_line
         TraceData  %增加的轨迹储存变量，储存四足和机身的轨迹参数
-        Foot_height=15;
+        Foot_height=30;
         NUM_trace=20;
         NUM_Step
         TCB %机身坐标系与单腿坐标系的变换矩阵
@@ -34,7 +34,7 @@ classdef class_BODY_CALU
         interSpace % 格式是4*2矩阵
         BodySpace % 身体工作空间
 %         stride = 100 % 最大跨距
-        stride = 80 % 最大跨距
+        stride = 50 % 最大跨距
         % 4*3的矩阵，分别是以足端为中心，四个身体顶点相对于足端点的δx/y/z
         IdealLegLength
         Land_pose%着陆位姿的初始位型

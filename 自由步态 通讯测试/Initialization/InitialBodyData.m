@@ -5,7 +5,7 @@
 function [BODY_FOR_CALU] = InitialBodyData(BODY_FOR_CALU,BODY_PARA)
 %% 初始化 BODY_FOR_CALU
 % 稳定裕度
-BODY_FOR_CALU.SM = 15;
+BODY_FOR_CALU.SM = 35;
 %重置步伐计数器
 BODY_FOR_CALU.NUM_Step=1;
 % 身体和四条腿的占比重量

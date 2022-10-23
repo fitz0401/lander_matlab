@@ -39,6 +39,7 @@ isFinishFlag = false;
 send(lander_pub, req_msg);
 % 用户输入，检查初始位置信息后决定是否继续执行
 cheak_string = input("请检查编码器位置是否正确（初始姿态下均为0），并决定是否继续执行[y/n]:","s");
+
 if(cheak_string == 'n')
     % 关闭ROS网络并退出程序
     rosshutdown
@@ -101,7 +102,7 @@ req_msg.CommandIndex = 3;
 % 记录执行次数
 count = 0;
 while(1)
-    %% 规划循环内容
+    %规划循环内容
     if stepNumber == 63
         robot1 = BODY_FOR_CALU;
     elseif stepNumber == 41
